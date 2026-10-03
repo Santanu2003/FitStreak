@@ -1,0 +1,22 @@
+# Render Blueprint — backend (Flask API). Frontend goes on Vercel (see frontend/vercel.json).
+services:
+  - type: web
+    name: fitstreak-api
+    runtime: python
+    plan: free                 # free = database resets on every restart (see README). Use "starter" + disk below to keep data.
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && gunicorn app:app --workers 1 --threads 4 --timeout 120 --bind 0.0.0.0:$PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: FITSTREAK_SECRET
+        generateValue: true    # random secret for signing login sessions
+      - key: FITSTREAK_COOKIE_SECURE
+        value: "1"
+    # --- To keep user data permanently: change plan to starter, uncomment this and the env var below ---
+    # disk:
+    #   name: fitstreak-data
+    #   mountPath: /var/data
+    #   sizeGB: 1
+    # (and add)  - key: FITSTREAK_DB_PATH   value: /var/data/fitstreak.db

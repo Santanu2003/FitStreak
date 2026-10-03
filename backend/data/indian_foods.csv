@@ -1,0 +1,368 @@
+Food_Item,Category,Meal_Type,Region,Calories,Protein_g,Carbs_g,Fat_g
+Roti / Chapati (1 medium),Indian Bread,Lunch,Pan-Indian,100,3.3,20,1.0
+"Phulka (1 small, no oil)",Indian Bread,Lunch,Pan-Indian,80,2.8,16,0.5
+Roti with Ghee (1 medium),Indian Bread,Lunch,Pan-Indian,135,3.3,20,4.5
+Tandoori Roti (1 piece),Indian Bread,Lunch,Pan-Indian,125,4,24,1.5
+Plain Paratha (1 medium),Indian Bread,Lunch,Pan-Indian,220,4.5,30,9
+Aloo Paratha (1 medium),Indian Bread,Lunch,Pan-Indian,275,6,38,11
+Gobi Paratha (1 medium),Indian Bread,Lunch,Pan-Indian,250,5.5,35,10
+Paneer Paratha (1 medium),Indian Bread,Lunch,Pan-Indian,290,9,34,13
+Mooli Paratha (1 medium),Indian Bread,Lunch,Pan-Indian,245,5,34,10
+Methi Paratha (1 medium),Indian Bread,Lunch,Pan-Indian,230,5.5,32,9
+Egg Paratha (1 medium),Indian Bread,Lunch,Pan-Indian,275,9,30,13
+Mutton Keema Paratha (1 medium),Indian Bread,Lunch,Pan-Indian,300,12,32,14
+Chicken Keema Paratha (1 medium),Indian Bread,Lunch,Pan-Indian,280,13,32,11
+Lachha Paratha (1 piece),Indian Bread,Lunch,Pan-Indian,255,5,32,12
+"Puri (1 medium, deep-fried)",Indian Bread,Lunch,Pan-Indian,120,2,13,6.5
+Bhatura (1 large),Indian Bread,Lunch,Pan-Indian,320,6,40,15
+Naan Plain (1 piece),Indian Bread,Lunch,Pan-Indian,255,8,45,5
+Butter Naan (1 piece),Indian Bread,Lunch,Pan-Indian,300,8,45,10
+Garlic Naan (1 piece),Indian Bread,Lunch,Pan-Indian,290,8,46,8
+Kulcha (1 piece),Indian Bread,Lunch,Pan-Indian,240,6,38,7
+Missi Roti (1 piece),Indian Bread,Lunch,Pan-Indian,155,5,24,4.5
+Makki di Roti (1 piece),Indian Bread,Lunch,Pan-Indian,155,3.5,26,4
+Bajra Roti (1 piece),Indian Bread,Lunch,Pan-Indian,120,3.5,21,2.5
+Jowar Roti (1 piece),Indian Bread,Lunch,Pan-Indian,110,3,22,1
+Ragi Roti (1 piece),Indian Bread,Lunch,Pan-Indian,115,3,22,1.5
+Thepla (1 piece),Indian Bread,Lunch,Pan-Indian,125,3.5,17,5
+Rumali Roti (1 piece),Indian Bread,Lunch,Pan-Indian,100,3,20,1
+"Steamed Rice (1 katori, ~150 g cooked)",Indian Rice,Lunch,Pan-Indian,190,4,42,0.4
+Jeera Rice (1 cup),Indian Rice,Lunch,Pan-Indian,230,4,42,5
+Vegetable Pulao (1 cup),Indian Rice,Lunch,Pan-Indian,265,5,45,7
+"Vegetable Biryani (1 plate, ~250 g)",Indian Rice,Lunch,Pan-Indian,390,8,62,12
+"Chicken Biryani (1 plate, ~300 g)",Indian Rice,Lunch,Pan-Indian,550,28,65,20
+"Mutton Biryani (1 plate, ~300 g)",Indian Rice,Lunch,Pan-Indian,575,26,62,25
+"Egg Biryani (1 plate, ~300 g)",Indian Rice,Lunch,Pan-Indian,475,16,62,18
+Curd Rice (1 cup),Indian Rice,Lunch,Pan-Indian,245,6,40,7
+Lemon Rice (1 cup),Indian Rice,Lunch,Pan-Indian,245,4,42,7
+Tomato Rice (1 cup),Indian Rice,Lunch,Pan-Indian,255,4,44,7
+Tamarind Rice / Puliyogare (1 cup),Indian Rice,Lunch,Pan-Indian,275,4,44,9
+Coconut Rice (1 cup),Indian Rice,Lunch,Pan-Indian,265,4,40,10
+Sambar Rice (1 cup),Indian Rice,Lunch,Pan-Indian,300,9,50,7
+Bisi Bele Bath (1 cup),Indian Rice,Lunch,Pan-Indian,265,8,40,8
+Moong Dal Khichdi (1 cup),Indian Rice,Lunch,Pan-Indian,225,8,35,6
+Rajma Chawal (1 plate),Indian Rice,Lunch,Pan-Indian,410,14,70,8
+"Fried Rice, Veg (1 plate)",Indian Rice,Lunch,Pan-Indian,370,7,58,12
+Dal Tadka / Dal Fry (1 katori),Dal & Legumes,Lunch,Pan-Indian,165,8,20,6
+Toor Dal (1 katori),Dal & Legumes,Lunch,Pan-Indian,135,7,18,4
+Moong Dal (1 katori),Dal & Legumes,Lunch,Pan-Indian,125,7,16,3.5
+Masoor Dal (1 katori),Dal & Legumes,Lunch,Pan-Indian,130,7.5,18,3
+Chana Dal (1 katori),Dal & Legumes,Lunch,Pan-Indian,150,8.5,20,4
+Dal Makhani (1 katori),Dal & Legumes,Lunch,Pan-Indian,235,9,20,13
+Dal Palak (1 katori),Dal & Legumes,Lunch,Pan-Indian,145,8,17,5
+Rajma Masala (1 katori),Dal & Legumes,Lunch,Pan-Indian,180,9,22,6
+Chole / Chana Masala (1 katori),Dal & Legumes,Lunch,Pan-Indian,215,9,27,8
+Lobia Curry (1 katori),Dal & Legumes,Lunch,Pan-Indian,155,8,20,5
+Sambar (1 katori),Dal & Legumes,Lunch,Pan-Indian,85,4,12,2.5
+Rasam (1 katori),Dal & Legumes,Lunch,Pan-Indian,40,1,6,1.5
+Punjabi Kadhi Pakora (1 katori),Dal & Legumes,Lunch,Pan-Indian,140,5,12,8
+"Sprouts Salad, Moong (1 bowl)",Dal & Legumes,Lunch,Pan-Indian,95,7,14,1
+Besan Chilla (1 piece),Dal & Legumes,Lunch,Pan-Indian,115,5,12,5
+Moong Dal Chilla (1 piece),Dal & Legumes,Lunch,Pan-Indian,100,5.5,10,4
+Paneer Butter Masala (1 katori),Veg Curry,Dinner,Pan-Indian,320,12,10,26
+Palak Paneer (1 katori),Veg Curry,Dinner,Pan-Indian,245,12,9,18
+Shahi Paneer (1 katori),Veg Curry,Dinner,Pan-Indian,310,12,11,24
+Kadai Paneer (1 katori),Veg Curry,Dinner,Pan-Indian,270,13,10,20
+Matar Paneer (1 katori),Veg Curry,Dinner,Pan-Indian,270,12,13,19
+Paneer Bhurji (1 katori),Veg Curry,Dinner,Pan-Indian,240,14,6,18
+"Paneer Tikka (6 pieces, ~100 g)",Veg Curry,Dinner,Pan-Indian,220,16,5,15
+"Paneer, Plain (50 g)",Veg Curry,Dinner,Pan-Indian,130,9,1.5,10
+Aloo Gobi (1 katori),Veg Curry,Dinner,Pan-Indian,120,3,14,6
+Aloo Matar (1 katori),Veg Curry,Dinner,Pan-Indian,135,4,16,6
+Aloo Jeera (1 katori),Veg Curry,Dinner,Pan-Indian,130,2.5,17,6
+Bhindi Masala (1 katori),Veg Curry,Dinner,Pan-Indian,100,2.5,9,6
+Baingan Bharta (1 katori),Veg Curry,Dinner,Pan-Indian,115,2.5,10,7
+Mixed Vegetable Curry (1 katori),Veg Curry,Dinner,Pan-Indian,110,3,11,6
+Malai Kofta (1 katori),Veg Curry,Dinner,Pan-Indian,295,8,16,22
+Vegetable Korma (1 katori),Veg Curry,Dinner,Pan-Indian,175,4,13,12
+Gobi Masala (1 katori),Veg Curry,Dinner,Pan-Indian,95,3,9,5
+Lauki Sabzi (1 katori),Veg Curry,Dinner,Pan-Indian,70,1.5,7,4
+Karela Sabzi (1 katori),Veg Curry,Dinner,Pan-Indian,95,2,8,6
+Cabbage Sabzi (1 katori),Veg Curry,Dinner,Pan-Indian,85,2,8,5
+Beans Poriyal (1 katori),Veg Curry,Dinner,Pan-Indian,90,2.5,9,5
+Avial (1 katori),Veg Curry,Dinner,Pan-Indian,135,3,10,9
+Sarson ka Saag (1 katori),Veg Curry,Dinner,Pan-Indian,125,5,10,7
+Mushroom Masala (1 katori),Veg Curry,Dinner,Pan-Indian,110,4,8,7
+Soya Chunks Curry (1 katori),Veg Curry,Dinner,Pan-Indian,165,14,12,7
+"Pav Bhaji (1 plate, 2 pav)",Veg Curry,Dinner,Pan-Indian,470,9,68,18
+Undhiyu (1 katori),Veg Curry,Dinner,Pan-Indian,225,5,20,14
+"Mutton Curry (1 katori, ~150 g with gravy)",Non-Veg Curry,Dinner,Pan-Indian,290,22,6,20
+Mutton Rogan Josh (1 katori),Non-Veg Curry,Dinner,Pan-Indian,310,22,6,22
+Mutton Keema (1 katori),Non-Veg Curry,Dinner,Pan-Indian,280,20,5,20
+Mutton Haleem (1 bowl),Non-Veg Curry,Dinner,Pan-Indian,295,20,20,15
+Mutton Seekh Kebab (2 pieces),Non-Veg Curry,Dinner,Pan-Indian,225,16,4,16
+Shami Kebab (2 pieces),Non-Veg Curry,Dinner,Pan-Indian,180,12,10,10
+"Chicken Curry (1 katori, ~150 g with gravy)",Non-Veg Curry,Dinner,Pan-Indian,230,20,6,14
+Butter Chicken (1 katori),Non-Veg Curry,Dinner,Pan-Indian,320,20,10,22
+Chicken Tikka Masala (1 katori),Non-Veg Curry,Dinner,Pan-Indian,285,22,9,18
+Chicken Korma (1 katori),Non-Veg Curry,Dinner,Pan-Indian,300,22,8,20
+Kadai Chicken (1 katori),Non-Veg Curry,Dinner,Pan-Indian,260,22,7,16
+Chicken Keema (1 katori),Non-Veg Curry,Dinner,Pan-Indian,220,21,5,13
+"Chicken Tikka (4 pieces, ~100 g)",Non-Veg Curry,Dinner,Pan-Indian,160,24,3,6
+Tandoori Chicken (1 leg piece),Non-Veg Curry,Dinner,Pan-Indian,205,25,4,10
+Chicken 65 (6 pieces),Non-Veg Curry,Dinner,Pan-Indian,290,20,12,18
+"Chicken Fry, Dry (100 g)",Non-Veg Curry,Dinner,Pan-Indian,245,24,6,14
+Chicken Seekh Kebab (2 pieces),Non-Veg Curry,Dinner,Pan-Indian,180,18,4,10
+Egg Curry (2 eggs with gravy),Non-Veg Curry,Dinner,Pan-Indian,220,14,7,15
+Egg Bhurji (2 eggs),Non-Veg Curry,Dinner,Pan-Indian,205,13,4,15
+Masala Omelette (2 eggs),Non-Veg Curry,Dinner,Pan-Indian,200,13,3,15
+Fish Curry (1 katori),Fish & Seafood,Dinner,Pan-Indian,190,20,5,10
+"Fish Fry (1 piece, ~100 g)",Fish & Seafood,Dinner,Pan-Indian,230,22,8,12
+Prawn Masala (1 katori),Fish & Seafood,Dinner,Pan-Indian,185,18,6,10
+Plain Dosa (1 medium),South Indian,Breakfast,South,160,3,28,4
+Masala Dosa (1 medium),South Indian,Breakfast,South,310,6,45,12
+Rava Dosa (1 medium),South Indian,Breakfast,South,210,4,30,8
+Set Dosa (2 pieces),South Indian,Breakfast,South,225,5,38,6
+Neer Dosa (1 piece),South Indian,Breakfast,South,90,1.5,17,1.5
+Pesarattu (1 piece),South Indian,Breakfast,South,165,6,24,5
+"Idli (1 piece, ~40 g)",South Indian,Breakfast,South,60,2,12,0.4
+Medu Vada (1 piece),South Indian,Breakfast,South,125,4,11,7
+Uttapam (1 piece),South Indian,Breakfast,South,200,5,32,6
+Upma (1 cup),South Indian,Breakfast,South,220,5,32,8
+Ven Pongal (1 cup),South Indian,Breakfast,South,235,6,35,8
+Poha (1 plate),South Indian,Breakfast,South,215,4,34,7
+Appam (1 piece),South Indian,Breakfast,South,90,1.5,17,1.5
+Idiyappam (2 pieces),South Indian,Breakfast,South,150,3,32,1
+Puttu with Coconut (1 cup),South Indian,Breakfast,South,215,4,38,5
+Akki Roti (1 piece),South Indian,Breakfast,South,180,4,28,6
+Coconut Chutney (2 tbsp),South Indian,Breakfast,South,60,1,3,5
+"Punjabi Samosa (1 large, potato)",Indian Snack,Snack,Pan-Indian,280,4,28,17
+Kachori (1 piece),Indian Snack,Snack,Pan-Indian,220,4,22,13
+Onion Pakora / Bhajiya (5 pieces),Indian Snack,Snack,Pan-Indian,215,5,20,13
+Mirchi Bajji (1 piece),Indian Snack,Snack,Pan-Indian,110,2,10,7
+Aloo Bonda (1 piece),Indian Snack,Snack,Pan-Indian,175,3,18,10
+Vada Pav (1 piece),Indian Snack,Snack,Pan-Indian,295,6,38,13
+Pani Puri (6 pieces),Indian Snack,Snack,Pan-Indian,195,3,30,7
+Bhel Puri (1 plate),Indian Snack,Snack,Pan-Indian,270,5,42,9
+Sev Puri (6 pieces),Indian Snack,Snack,Pan-Indian,235,4,28,12
+Aloo Tikki (2 pieces),Indian Snack,Snack,Pan-Indian,225,4,30,10
+Dhokla (2 pieces),Indian Snack,Snack,Pan-Indian,105,4,16,3
+Khandvi (5 pieces),Indian Snack,Snack,Pan-Indian,95,4,11,4
+"Chole Bhature (1 plate, 1 bhatura)",Indian Snack,Snack,Pan-Indian,670,16,80,32
+Maggi Masala Noodles (1 packet),Indian Snack,Snack,Pan-Indian,330,6,45,14
+"Veg Momos, Steamed (6 pieces)",Indian Snack,Snack,Pan-Indian,215,6,36,5
+"Chicken Momos, Steamed (6 pieces)",Indian Snack,Snack,Pan-Indian,260,15,34,7
+Chicken Kathi Roll (1 roll),Indian Snack,Snack,Pan-Indian,420,20,45,18
+Sev Bhujia / Mixture (30 g),Indian Snack,Snack,Pan-Indian,185,4,15,12
+Roasted Chana (30 g),Indian Snack,Snack,Pan-Indian,110,6,18,1.5
+Roasted Makhana (30 g),Indian Snack,Snack,Pan-Indian,105,3,22,0.3
+Roasted Peanuts (30 g),Indian Snack,Snack,Pan-Indian,185,7.5,5,15
+"Peanut Chikki (1 piece, ~25 g)",Indian Snack,Snack,Pan-Indian,135,3.5,15,7
+Gulab Jamun (1 piece),Indian Sweet,Snack,Pan-Indian,160,2,22,7
+Rasgulla (1 piece),Indian Sweet,Snack,Pan-Indian,110,2,25,0.5
+Rasmalai (1 piece),Indian Sweet,Snack,Pan-Indian,175,6,20,8
+Jalebi (2 pieces),Indian Sweet,Snack,Pan-Indian,205,1.5,34,7
+"Kaju Katli (1 piece, ~20 g)",Indian Sweet,Snack,Pan-Indian,100,2.5,11,5
+"Besan Ladoo (1 piece, ~40 g)",Indian Sweet,Snack,Pan-Indian,185,3.5,20,10
+"Motichoor Ladoo (1 piece, ~40 g)",Indian Sweet,Snack,Pan-Indian,185,2,26,8
+Rava Ladoo (1 piece),Indian Sweet,Snack,Pan-Indian,175,2,26,7
+Til Ladoo (1 piece),Indian Sweet,Snack,Pan-Indian,165,3,20,8
+"Peda (1 piece, ~25 g)",Indian Sweet,Snack,Pan-Indian,120,3,17,4.5
+"Milk Barfi (1 piece, ~30 g)",Indian Sweet,Snack,Pan-Indian,150,4,20,6
+Sandesh (1 piece),Indian Sweet,Snack,Pan-Indian,100,3,15,3
+"Gajar Halwa (1 katori, ~100 g)",Indian Sweet,Snack,Pan-Indian,235,4,28,12
+"Moong Dal Halwa (1 katori, ~100 g)",Indian Sweet,Snack,Pan-Indian,320,6,34,18
+Suji Halwa (1 katori),Indian Sweet,Snack,Pan-Indian,290,3,38,14
+Kheer / Payasam (1 katori),Indian Sweet,Snack,Pan-Indian,205,5,30,7
+Soan Papdi (1 piece),Indian Sweet,Snack,Pan-Indian,130,1.5,16,6.5
+"Mysore Pak (1 piece, ~30 g)",Indian Sweet,Snack,Pan-Indian,195,2,17,13
+Imarti (1 piece),Indian Sweet,Snack,Pan-Indian,225,2,34,9
+"Shrikhand (1 katori, ~100 g)",Indian Sweet,Snack,Pan-Indian,205,4,32,7
+Rabri (1 katori),Indian Sweet,Snack,Pan-Indian,245,6,28,12
+"Kulfi (1 piece, ~60 g)",Indian Sweet,Snack,Pan-Indian,145,3,17,7
+Modak (1 piece),Indian Sweet,Snack,Pan-Indian,150,2,24,5
+Puran Poli (1 piece),Indian Sweet,Snack,Pan-Indian,265,5,45,7
+Jaggery / Gur (10 g),Sugar & Jaggery,Snack,Pan-Indian,40,0,9.5,0
+Sugar (1 tsp),Sugar & Jaggery,Snack,Pan-Indian,15,0,4,0
+Masala Chai with Milk & Sugar (1 cup),Indian Beverage,Breakfast,Pan-Indian,85,3,12,3
+"Chai with Milk, No Sugar (1 cup)",Indian Beverage,Breakfast,Pan-Indian,60,3,5,3
+Filter Coffee with Milk & Sugar (1 cup),Indian Beverage,Breakfast,Pan-Indian,85,3,12,3
+"Sweet Lassi (1 glass, 250 ml)",Indian Beverage,Breakfast,Pan-Indian,230,7,35,7
+"Mango Lassi (1 glass, 250 ml)",Indian Beverage,Breakfast,Pan-Indian,235,6,42,5
+"Chaas / Buttermilk (1 glass, 250 ml)",Indian Beverage,Breakfast,Pan-Indian,50,3,6,1.5
+"Sugarcane Juice (1 glass, 250 ml)",Indian Beverage,Breakfast,Pan-Indian,180,0.5,44,0
+"Nimbu Pani, Sweet (1 glass)",Indian Beverage,Breakfast,Pan-Indian,80,0,20,0
+"Tender Coconut Water (1 glass, 250 ml)",Indian Beverage,Breakfast,Pan-Indian,40,0.5,9,0.4
+"Thandai (1 glass, 250 ml)",Indian Beverage,Breakfast,Pan-Indian,240,6,32,10
+Turmeric Milk / Haldi Doodh (1 glass),Indian Beverage,Breakfast,Pan-Indian,150,8,12,8
+"Curd / Dahi (1 katori, ~100 g, whole milk)",Dairy & Sides,Lunch,Pan-Indian,70,3.5,4.5,4
+"Low-Fat Curd (1 katori, ~100 g)",Dairy & Sides,Lunch,Pan-Indian,50,4,5,1.5
+Cucumber Raita (1 katori),Dairy & Sides,Lunch,Pan-Indian,80,3.5,7,4
+Boondi Raita (1 katori),Dairy & Sides,Lunch,Pan-Indian,110,4,10,6
+Ghee (1 tsp),Dairy & Sides,Lunch,Pan-Indian,45,0,0,5
+Butter (1 tsp),Dairy & Sides,Lunch,Pan-Indian,35,0,0,4
+"Milk, Whole (1 glass, 250 ml)",Dairy & Sides,Lunch,Pan-Indian,150,8,12,8
+"Milk, Toned (1 glass, 250 ml)",Dairy & Sides,Lunch,Pan-Indian,115,7.5,12,4
+"Papad, Roasted (1 piece)",Dairy & Sides,Lunch,Pan-Indian,30,2,5,0.4
+"Papad, Fried (1 piece)",Dairy & Sides,Lunch,Pan-Indian,55,1.5,4,3.5
+Achar / Pickle (1 tsp),Dairy & Sides,Lunch,Pan-Indian,15,0.1,0.5,1.5
+Kachumber Salad (1 bowl),Dairy & Sides,Lunch,Pan-Indian,30,1,6,0.3
+"Simple Home Meal (2 roti, dal, sabzi, 1 cup rice)",Indian Meal,Lunch,Pan-Indian,635,21,111,12
+"Veg Thali (2 roti, dal, sabzi, rice, salad)",Indian Meal,Lunch,Pan-Indian,680,20,100,22
+"Luchi (1 piece, deep-fried maida puri)",Bengali,Breakfast,East (Bengali),110,2,12,6
+Luchi with Aloor Dom (4 luchi + 1 katori),Bengali,Breakfast,East (Bengali),620,11,68,34
+Radhaballabhi (1 piece),Bengali,Breakfast,East (Bengali),150,3,17,8
+"Bengali Kochuri, Dal-Stuffed (1 piece)",Bengali,Breakfast,East (Bengali),140,3,15,7.5
+Hing-er Kochuri (1 piece),Bengali,Breakfast,East (Bengali),135,3,15,7
+Aloor Dom (1 katori),Bengali,Breakfast,East (Bengali),180,3,20,10
+Aloo Posto (1 katori),Bengali,Breakfast,East (Bengali),185,4,17,11
+Cholar Dal with Coconut (1 katori),Bengali,Breakfast,East (Bengali),170,7,20,7
+Bhaja Muger Dal (1 katori),Bengali,Breakfast,East (Bengali),145,8,17,5
+Shukto (1 katori),Bengali,Breakfast,East (Bengali),125,3,12,7
+Begun Bhaja (2 slices),Bengali,Breakfast,East (Bengali),105,1.5,7,8
+Beguni (2 pieces),Bengali,Breakfast,East (Bengali),160,3,14,10
+Mochar Ghonto (1 katori),Bengali,Breakfast,East (Bengali),155,4,14,9
+Lau Ghonto (1 katori),Bengali,Breakfast,East (Bengali),85,2,8,5
+Bengali Mixed Veg Chorchori (1 katori),Bengali,Breakfast,East (Bengali),125,3,12,7
+Potoler Dolma (2 pieces),Bengali,Breakfast,East (Bengali),190,6,14,12
+"Bengali Khichuri, Bhoger (1 cup)",Bengali,Breakfast,East (Bengali),255,8,36,9
+"Machher Jhol, Rohu Curry (1 katori)",Fish & Seafood,Breakfast,East (Bengali),160,18,4,8
+"Shorshe Ilish, Hilsa in Mustard (1 piece with gravy)",Fish & Seafood,Breakfast,East (Bengali),265,18,3,20
+"Chingri Malai Curry, Prawn (1 katori)",Fish & Seafood,Breakfast,East (Bengali),270,16,7,20
+Doi Maach (1 katori),Fish & Seafood,Breakfast,East (Bengali),210,19,6,12
+Katla Kalia (1 katori),Fish & Seafood,Breakfast,East (Bengali),205,18,6,12
+"Kosha Mangsho, Bengali Mutton (1 katori)",Bengali,Breakfast,East (Bengali),315,24,5,22
+"Murgir Jhol, Bengali Chicken Curry (1 katori)",Bengali,Breakfast,East (Bengali),200,20,5,11
+"Kolkata Chicken Biryani (1 plate, with potato & egg)",Bengali,Breakfast,East (Bengali),555,26,68,20
+Kolkata Egg Roll (1 roll),Bengali,Breakfast,East (Bengali),350,12,40,16
+Kolkata Mutton Kathi Roll (1 roll),Bengali,Breakfast,East (Bengali),420,18,42,20
+Jhalmuri (1 bowl),Bengali,Breakfast,East (Bengali),205,4,32,7
+Muri / Puffed Rice (1 cup),Bengali,Breakfast,East (Bengali),70,1,16,0.1
+Ghugni (1 katori),Bengali,Breakfast,East (Bengali),200,9,25,7
+Aloo Kabli (1 plate),Bengali,Breakfast,East (Bengali),220,5,32,8
+"Mutton Chop, Bengali (1 piece)",Bengali,Breakfast,East (Bengali),170,8,12,10
+Egg Chop (1 piece),Bengali,Breakfast,East (Bengali),190,8,12,12
+"Vegetable Chop, Bengali (1 piece)",Bengali,Breakfast,East (Bengali),140,3,14,8
+"Fish Cutlet, Kolkata (1 piece)",Fish & Seafood,Breakfast,East (Bengali),160,8,12,9
+"Mishti Doi (1 katori, ~100 g)",Bengali Sweet,Snack,East (Bengali),140,3.5,22,4
+Nolen Gurer Sandesh (1 piece),Bengali Sweet,Snack,East (Bengali),115,3,17,4
+Chomchom (1 piece),Bengali Sweet,Snack,East (Bengali),150,3,25,4
+Pantua (1 piece),Bengali Sweet,Snack,East (Bengali),190,2,28,8
+Langcha (1 piece),Bengali Sweet,Snack,East (Bengali),210,2.5,30,9
+Kalojam (1 piece),Bengali Sweet,Snack,East (Bengali),180,2,25,8
+Rajbhog (1 piece),Bengali Sweet,Snack,East (Bengali),225,5,33,8
+"Chhena Poda (1 piece, ~60 g)",Bengali Sweet,Snack,East (Bengali),185,6,22,8
+Patishapta (1 piece),Bengali Sweet,Snack,East (Bengali),180,3,28,6
+Puli Pithe (1 piece),Bengali Sweet,Snack,East (Bengali),150,2,26,4
+"Narkel Naru, Coconut Ladoo (1 piece)",Bengali Sweet,Snack,East (Bengali),135,2,16,7
+Malpua (1 piece),Bengali Sweet,Snack,East (Bengali),220,3,30,10
+Darbesh (1 piece),Bengali Sweet,Snack,East (Bengali),175,2,26,7
+"Payesh, Bengali Rice Kheer (1 katori)",Bengali Sweet,Snack,East (Bengali),220,5,32,8
+"Ghevar (1 piece, ~50 g)",Indian Sweet,Snack,Pan-Indian,245,2,30,13
+Balushahi (1 piece),Indian Sweet,Snack,Pan-Indian,235,2,30,12
+Kalakand (1 piece),Indian Sweet,Snack,Pan-Indian,150,4,20,6
+Coconut Barfi (1 piece),Indian Sweet,Snack,Pan-Indian,150,2,20,7
+Besan Barfi (1 piece),Indian Sweet,Snack,Pan-Indian,175,3,20,9
+Dry Fruit Barfi (1 piece),Indian Sweet,Snack,Pan-Indian,145,3,15,8
+Badam Halwa (1 katori),Indian Sweet,Snack,Pan-Indian,345,5,32,22
+Atta Halwa (1 katori),Indian Sweet,Snack,Pan-Indian,285,3,35,15
+Lauki Halwa (1 katori),Indian Sweet,Snack,Pan-Indian,215,3,28,10
+Sheer Khurma (1 katori),Indian Sweet,Snack,Pan-Indian,255,6,35,10
+Phirni (1 katori),Indian Sweet,Snack,Pan-Indian,205,5,30,7
+Double ka Meetha (1 piece),Indian Sweet,Snack,Pan-Indian,300,5,38,14
+Qubani ka Meetha (1 katori),Indian Sweet,Snack,Pan-Indian,240,2,45,6
+Shahi Tukda (1 piece),Indian Sweet,Snack,Pan-Indian,345,6,40,18
+Basundi (1 katori),Indian Sweet,Snack,Pan-Indian,230,7,28,10
+Mohanthal (1 piece),Indian Sweet,Snack,Pan-Indian,210,3,22,12
+Shankarpali (30 g),Indian Sweet,Snack,Pan-Indian,150,2,18,8
+Falooda (1 glass),Indian Sweet,Snack,Pan-Indian,315,6,50,10
+Kulfi Falooda (1 glass),Indian Sweet,Snack,Pan-Indian,360,8,55,12
+Kesari Bath / Rava Kesari (1 katori),Indian Sweet,Snack,Pan-Indian,300,3,40,14
+Adhirasam (1 piece),Indian Sweet,Snack,Pan-Indian,215,2,32,9
+Unni Appam (1 piece),Indian Sweet,Snack,Pan-Indian,125,2,18,5
+"Kozhukattai, Sweet (1 piece)",Indian Sweet,Snack,Pan-Indian,85,1.5,15,2
+Ada Pradhaman (1 katori),Indian Sweet,Snack,Pan-Indian,265,4,40,10
+Gud ki Kheer / Jaggery Kheer (1 katori),Indian Sweet,Snack,Pan-Indian,220,5,34,7
+Dal Kachori (1 piece),Indian Snack,Snack,Pan-Indian,225,5,24,12
+Pyaz Kachori (1 piece),Indian Snack,Snack,Pan-Indian,235,4,26,13
+Raj Kachori (1 plate),Indian Snack,Snack,Pan-Indian,435,9,55,20
+Poori Bhaji (1 plate: 3 puri + aloo sabzi),Indian Snack,Snack,Pan-Indian,500,9,58,26
+Mini Samosa (1 piece),Indian Snack,Snack,Pan-Indian,95,1.5,9,6
+Keema Samosa (1 large),Indian Snack,Snack,Pan-Indian,295,8,25,18
+Samosa Chaat (1 plate),Indian Snack,Snack,Pan-Indian,435,9,50,22
+Chicken Cutlet (1 piece),Indian Snack,Snack,Pan-Indian,170,8,14,9
+Veg Cutlet (1 piece),Indian Snack,Snack,Pan-Indian,150,3,16,8
+"Dahi Vada / Dahi Bhalla (1 plate, 2 pieces)",Indian Snack,Snack,Pan-Indian,220,8,25,10
+Papdi Chaat (1 plate),Indian Snack,Snack,Pan-Indian,300,6,38,14
+Aloo Chaat (1 plate),Indian Snack,Snack,Pan-Indian,225,4,32,9
+Ragda Patties (1 plate),Indian Snack,Snack,Pan-Indian,345,9,50,12
+Misal Pav (1 plate),Indian Snack,Snack,Pan-Indian,480,14,65,18
+Sabudana Khichdi (1 plate),Indian Snack,Snack,Pan-Indian,340,3,50,14
+Sabudana Vada (2 pieces),Indian Snack,Snack,Pan-Indian,265,3,32,14
+Dabeli (1 piece),Indian Snack,Snack,Pan-Indian,320,6,42,14
+Paneer Pakora (4 pieces),Indian Snack,Snack,Pan-Indian,230,10,12,16
+Bread Pakora (1 piece),Indian Snack,Snack,Pan-Indian,200,5,22,10
+Grilled Veg Sandwich (1 sandwich),Indian Snack,Snack,Pan-Indian,305,9,40,12
+"Bread Omelette (2 slices, 2 eggs)",Indian Snack,Snack,Pan-Indian,320,16,28,16
+"Chilli Paneer, Dry (1 plate)",Indian Snack,Snack,Pan-Indian,335,16,14,24
+"Gobi Manchurian, Dry (1 plate)",Indian Snack,Snack,Pan-Indian,300,6,28,18
+"Chilli Chicken, Dry (1 plate)",Indian Snack,Snack,Pan-Indian,330,25,12,20
+"Chicken Manchurian, Dry (1 plate)",Indian Snack,Snack,Pan-Indian,325,22,14,20
+Veg Hakka Noodles (1 plate),Indian Snack,Snack,Pan-Indian,405,8,62,14
+Veg Spring Roll (1 piece),Indian Snack,Snack,Pan-Indian,155,3,18,8
+Roasted Corn / Bhutta with Masala (1 cob),Indian Snack,Snack,Pan-Indian,135,3,27,1.5
+Chivda (30 g),Indian Snack,Snack,Pan-Indian,180,3,20,10
+Murukku / Chakli (30 g),Indian Snack,Snack,Pan-Indian,150,2.5,17,8
+"Banana Chips, Kerala (30 g)",Indian Snack,Snack,Pan-Indian,160,0.8,17,10
+Thattai (30 g),Indian Snack,Snack,Pan-Indian,150,2,18,8
+Mathri (2 pieces),Indian Snack,Snack,Pan-Indian,135,2,14,8
+Namak Pare (30 g),Indian Snack,Snack,Pan-Indian,155,2,17,9
+Khakhra (1 piece),Indian Snack,Snack,Pan-Indian,70,2,10,2.5
+Fafda (2 pieces),Indian Snack,Snack,Pan-Indian,180,4,18,10
+Handvo (1 piece),Indian Snack,Snack,Pan-Indian,170,5,20,8
+Patra / Alu Vadi (2 pieces),Indian Snack,Snack,Pan-Indian,125,3,15,6
+Thalipeeth (1 piece),Indian Snack,Snack,Pan-Indian,185,5,25,7
+Masala Vada (2 pieces),Indian Snack,Snack,Pan-Indian,175,5,16,10
+Punugulu (5 pieces),Indian Snack,Snack,Pan-Indian,185,4,20,10
+Mysore Bonda (3 pieces),Indian Snack,Snack,Pan-Indian,205,4,20,12
+"Ilish Bhaja, Fried Hilsa (1 piece, ~80 g)",Fish & Seafood,Lunch,East (Bengali),240,16,3,18
+"Ilish Paturi, Hilsa in Banana Leaf (1 piece)",Fish & Seafood,Lunch,East (Bengali),280,17,4,22
+"Ilish Bhapa, Steamed Hilsa in Mustard (1 piece)",Fish & Seafood,Lunch,East (Bengali),270,17,3,21
+"Ilish Macher Jhol, Hilsa Light Curry (1 piece with gravy)",Fish & Seafood,Lunch,East (Bengali),235,17,4,17
+"Hilsa / Ilish, Cooked Plain (100 g)",Fish & Seafood,Lunch,East (Bengali),255,21,0,19
+"Chingri Bhapa, Steamed Prawns in Mustard (1 katori)",Fish & Seafood,Lunch,East (Bengali),210,17,4,14
+"Daab Chingri, Prawns in Tender Coconut (1 serving)",Fish & Seafood,Dinner,East (Bengali),255,17,6,18
+"Lau Chingri, Bottle Gourd with Prawns (1 katori)",Fish & Seafood,Lunch,East (Bengali),145,9,7,9
+"Chingri Bhaja, Fried Prawns (5 pieces)",Fish & Seafood,Snack,East (Bengali),170,16,4,10
+"Chingri Cutlet, Prawn Cutlet (1 piece)",Fish & Seafood,Snack,East (Bengali),160,8,12,9
+"Shorshe Rui, Rohu in Mustard (1 piece with gravy)",Fish & Seafood,Lunch,East (Bengali),215,18,4,14
+"Rui Maach Bhaja, Fried Rohu (1 piece, ~80 g)",Fish & Seafood,Lunch,East (Bengali),175,17,4,10
+Katla Macher Jhol (1 piece with gravy),Fish & Seafood,Lunch,East (Bengali),175,18,5,9
+Pabda Macher Jhol (3 small pieces with gravy),Fish & Seafood,Lunch,East (Bengali),155,15,4,9
+Tangra Macher Jhol (1 katori),Fish & Seafood,Lunch,East (Bengali),145,14,4,8
+"Koi Maach, Climbing Perch Curry (1 piece with gravy)",Fish & Seafood,Lunch,East (Bengali),165,15,4,10
+"Mourala Macher Jhol, Small Fish Curry (1 katori)",Fish & Seafood,Lunch,East (Bengali),120,12,4,6
+"Bhetki Paturi (1 piece, ~100 g)",Fish & Seafood,Dinner,East (Bengali),180,20,3,10
+"Bhetki Fry (1 piece, ~100 g)",Fish & Seafood,Dinner,East (Bengali),210,20,6,12
+"Macher Dim Bora, Fish Egg Fritter (2 pieces)",Fish & Seafood,Snack,East (Bengali),160,9,8,10
+Fish Kabiraji (1 piece),Fish & Seafood,Snack,East (Bengali),220,10,14,14
+"Shutki Maach Bhuna, Dry Fish Curry (1 katori)",Fish & Seafood,Dinner,East (Bengali),145,14,4,8
+"Kerala Fish Curry, Meen Curry (1 katori)",Fish & Seafood,Lunch,South (Kerala),200,20,5,11
+"Karimeen Pollichathu, Pearl Spot (1 fish)",Fish & Seafood,Dinner,South (Kerala),245,24,6,14
+"Meen Fry, Kerala Fish Fry (1 piece)",Fish & Seafood,Lunch,South (Kerala),220,22,6,12
+"Mathi Fry, Sardine Fry (2 pieces)",Fish & Seafood,Lunch,South (Kerala),175,16,5,10
+"Mathi Curry, Sardine Curry (1 katori)",Fish & Seafood,Lunch,South (Kerala),185,18,4,11
+"Chemmeen Curry, Prawn Coconut Curry (1 katori)",Fish & Seafood,Lunch,South (Kerala),215,15,7,14
+"Chemmeen Fry, Dry Prawn Fry (100 g)",Fish & Seafood,Snack,South (Kerala),185,18,6,10
+Goan Fish Curry (1 katori),Fish & Seafood,Lunch,West Coast,210,19,6,12
+"Recheado Fish Fry, Goan (1 piece)",Fish & Seafood,Lunch,West Coast,215,22,5,12
+Bombil / Bombay Duck Fry (3 pieces),Fish & Seafood,Snack,West Coast,170,12,8,10
+"Pomfret Tawa Fry (1 medium, ~150 g)",Fish & Seafood,Dinner,West Coast,245,26,6,13
+Pomfret Curry (1 piece with gravy),Fish & Seafood,Dinner,West Coast,190,20,5,10
+Surmai / Kingfish Fry (1 slice),Fish & Seafood,Lunch,West Coast,215,22,5,12
+Bangda / Mackerel Fry (1 fish),Fish & Seafood,Lunch,West Coast,230,20,6,14
+Crab Masala (1 katori),Fish & Seafood,Dinner,West Coast,195,20,6,10
+Squid Masala Fry (100 g),Fish & Seafood,Snack,West Coast,175,16,8,9
+Fish Tikka (4 pieces),Fish & Seafood,Snack,Pan-Indian,185,22,4,9
+Amritsari Fish Fry (4 pieces),Fish & Seafood,Snack,North (Punjab),290,20,12,18
+Fish Pakora (5 pieces),Fish & Seafood,Snack,Pan-Indian,220,14,10,14
+"Fish Biryani (1 plate, ~300 g)",Fish & Seafood,Lunch,Pan-Indian,490,24,62,16
+"Prawn Biryani (1 plate, ~300 g)",Fish & Seafood,Lunch,Pan-Indian,480,22,62,16
+"Rohu / Rui, Cooked Plain (100 g)",Fish & Seafood,Lunch,Pan-Indian,110,19,0,4
+"Katla, Cooked Plain (100 g)",Fish & Seafood,Lunch,Pan-Indian,100,18,0,3
+"Pomfret, Cooked Plain (100 g)",Fish & Seafood,Lunch,Pan-Indian,115,20,0,4
+"Bhetki, Cooked Plain (100 g)",Fish & Seafood,Lunch,Pan-Indian,105,22,0,2
+"Mackerel / Bangda, Cooked Plain (100 g)",Fish & Seafood,Lunch,Pan-Indian,200,21,0,13
+"Sardine / Mathi, Cooked Plain (100 g)",Fish & Seafood,Lunch,Pan-Indian,180,22,0,10
+"Prawns / Chingri, Boiled (100 g)",Fish & Seafood,Lunch,Pan-Indian,95,20,0,1.5
+"Crab / Kekda, Boiled (100 g)",Fish & Seafood,Lunch,Pan-Indian,95,19,0,2

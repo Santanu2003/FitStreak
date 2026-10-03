@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="FitStreak">
+  <rect width="200" height="200" rx="52" fill="#1A1033"/>
+  <circle cx="100" cy="110" r="82" fill="#2A1B54"/>
+  <rect x="18" y="92" width="30" height="6" rx="3" fill="#fff" opacity="0.55"/>
+  <rect x="18" y="111" width="20" height="6" rx="3" fill="#fff" opacity="0.4"/>
+  <rect x="18" y="130" width="12" height="6" rx="3" fill="#fff" opacity="0.25"/>
+  <path fill="#FF3D68" d="M110 28C112 60 152 74 152 120C152 158 126 178 100 178C72 178 50 158 50 126C50 102 64 88 74 72C78 90 86 100 96 102C90 78 96 50 110 28Z"/>
+  <path fill="#FF8A00" d="M104 68C108 90 134 100 134 128C134 152 118 168 100 168C82 168 68 154 68 134C68 118 80 110 88 98C92 108 98 112 104 112C102 96 100 82 104 68Z"/>
+  <path fill="#FFD23F" d="M100 118C107 130 118 136 118 150C118 160 110 166 100 166C90 166 82 160 82 150C82 138 92 132 100 118Z"/>
+  <circle cx="158" cy="66" r="4" fill="#FFD23F"/>
+  <circle cx="170" cy="90" r="2.5" fill="#FF8A00"/>
+</svg>

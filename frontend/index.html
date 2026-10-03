@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FitStreak — Fitness Companion</title>
+<meta name="description" content="FitStreak: log workouts and meals, predict calorie burn and keep your streak alive." />
+<meta name="theme-color" content="#1A1033" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css?v=9.6" />
+</head>
+<body>
+
+<!-- ===================== AUTH SCREEN ===================== -->
+<div id="auth-screen" class="auth-screen">
+
+  <section class="auth-hero">
+    <canvas class="embers" id="embers" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <div class="hero-flame" id="hero-flame">
+        <div class="flame-glow"></div>
+        <svg viewBox="0 0 200 200" role="img" aria-label="FitStreak flame logo">
+          <circle cx="100" cy="110" r="82" fill="#2A1B54"/>
+          <g class="speed">
+            <rect class="bar bar-1" x="18" y="92" width="30" height="6" rx="3"/>
+            <rect class="bar bar-2" x="18" y="111" width="20" height="6" rx="3"/>
+            <rect class="bar bar-3" x="18" y="130" width="12" height="6" rx="3"/>
+          </g>
+          <path class="flame f-out" fill="#FF3D68" d="M110 28C112 60 152 74 152 120C152 158 126 178 100 178C72 178 50 158 50 126C50 102 64 88 74 72C78 90 86 100 96 102C90 78 96 50 110 28Z"/>
+          <path class="flame f-mid" fill="#FF8A00" d="M104 68C108 90 134 100 134 128C134 152 118 168 100 168C82 168 68 154 68 134C68 118 80 110 88 98C92 108 98 112 104 112C102 96 100 82 104 68Z"/>
+          <path class="flame f-core" fill="#FFD23F" d="M100 118C107 130 118 136 118 150C118 160 110 166 100 166C90 166 82 160 82 150C82 138 92 132 100 118Z"/>
+          <circle class="spark s-1" cx="158" cy="66" r="4" fill="#FFD23F"/>
+          <circle class="spark s-2" cx="170" cy="90" r="2.5" fill="#FF8A00"/>
+        </svg>
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-word">Fit<span>Streak</span></h1>
+        <p class="hero-tag">Built for users, by users. Track it, predict it, keep the streak alive.</p>
+        <ol class="streak-week" aria-label="Seven days in a row">
+          <li class="day" style="--i:0"><span>M</span></li>
+          <li class="day" style="--i:1"><span>T</span></li>
+          <li class="day" style="--i:2"><span>W</span></li>
+          <li class="day" style="--i:3"><span>T</span></li>
+          <li class="day" style="--i:4"><span>F</span></li>
+          <li class="day" style="--i:5"><span>S</span></li>
+          <li class="day" style="--i:6"><span>S</span></li>
+        </ol>
+        <p class="streak-note">Log something every day and your streak keeps climbing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="auth-panel">
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login">Log in</button>
+      <button class="auth-tab" data-tab="register">Create account</button>
+    </div>
+
+    <form id="login-form" class="auth-form">
+      <h2>Welcome back</h2>
+      <p class="form-sub">Log in to pick up your streak where you left it.</p>
+      <label>Email
+        <input type="email" name="email" required placeholder="you@campus.edu" />
+      </label>
+      <label>Password
+        <input type="password" name="password" required placeholder="••••••••" />
+      </label>
+      <p class="form-error" id="login-error"></p>
+      <button type="submit" class="btn btn-primary">Log in</button>
+      <p class="auth-hint">New here? Use "Create account" above — it takes 30 seconds.</p>
+    </form>
+
+    <form id="register-form" class="auth-form hidden">
+      <h2>Start your streak</h2>
+      <p class="form-sub">A few details let us estimate calories and plan your week.</p>
+      <label>Full name
+        <input type="text" name="name" required placeholder="Asha Verma" />
+      </label>
+      <label>Email
+        <input type="email" name="email" required placeholder="you@campus.edu" />
+      </label>
+      <label>Password
+        <input type="password" name="password" required minlength="6" placeholder="At least 6 characters" />
+      </label>
+      <div class="form-row">
+        <label>Age
+          <input type="number" name="age" min="13" max="100" required placeholder="20" />
+        </label>
+        <label>Gender
+          <select name="gender">
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-row">
+        <label>Height (cm)
+          <input type="number" name="height_cm" min="100" max="230" step="0.1" required placeholder="165" />
+        </label>
+        <label>Weight (kg)
+          <input type="number" name="weight_kg" min="30" max="250" step="0.1" required placeholder="60" />
+        </label>
+      </div>
+      <label>Experience level
+        <select name="experience_level">
+          <option value="1">Beginner</option>
+          <option value="2">Intermediate</option>
+          <option value="3">Expert</option>
+        </select>
+      </label>
+      <p class="form-error" id="register-error"></p>
+      <button type="submit" class="btn btn-primary">Create account</button>
+    </form>
+  </section>
+</div>
+
+<!-- ===================== APP SHELL ===================== -->
+<div id="app-shell" class="app-shell hidden">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img class="brand-logo" src="/assets/logo-mark.svg" width="38" height="38" alt="FitStreak logo" />
+      <span class="brand-word">Fit<b>Streak</b></span>
+    </div>
+    <nav class="sidebar-nav">
+      <button class="nav-link active" data-view="dashboard">Dashboard</button>
+      <button class="nav-link" data-view="predict">Predict &amp; Recommend</button>
+      <button class="nav-link" data-view="library">Exercise Library</button>
+      <button class="nav-link" data-view="insights">User Insights</button>
+      <button class="nav-link" data-view="benchmark">Health Benchmark</button>
+      <button class="nav-link" data-view="nutrition">Nutrition</button>
+      <button class="nav-link" data-view="weight">Weight &amp; BMI</button>
+      <button class="nav-link" data-view="leaderboard">Leaderboard</button>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name" id="sidebar-user-name">—</div>
+      <div class="user-meta" id="sidebar-user-meta">—</div>
+      <button class="btn btn-ghost" id="logout-btn">Log out</button>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <!-- ---------- DASHBOARD ---------- -->
+    <section class="view active" id="view-dashboard">
+      <header class="view-header">
+        <h2>Dashboard</h2>
+        <p>Your streak, your numbers, and today's log — in one place.</p>
+      </header>
+
+      <div class="nudge hidden" id="today-nudge"></div>
+
+      <div class="stat-row">
+        <div class="stat-block">
+          <span class="stat-num" id="stat-streak">0</span>
+          <span class="stat-label">day streak</span>
+          <span class="badge-tag" id="stat-badge">No badge yet</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-num" id="stat-calories">0</span>
+          <span class="stat-label">kcal logged</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-num" id="stat-sessions">0</span>
+          <span class="stat-label">sessions logged</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-num" id="stat-steps">0</span>
+          <span class="stat-label">steps logged</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-num" id="stat-net">0</span>
+          <span class="stat-label">net kcal today</span>
+          <span class="stat-detail" id="stat-net-detail"></span>
+        </div>
+      </div>
+
+      <div class="panel-grid">
+        <div class="panel">
+          <h3>Log today's activity</h3>
+          <form id="activity-form">
+            <div class="form-row">
+              <label>Date
+                <input type="date" name="date" required />
+              </label>
+              <label>Activity
+                <select name="activity_type" id="activity-type-select" required></select>
+              </label>
+            </div>
+            <div class="form-row">
+              <label>Duration (min)
+                <input type="number" name="duration_min" min="1" max="600" required placeholder="30" />
+              </label>
+              <label>Steps (optional)
+                <input type="number" name="steps" min="0" placeholder="4000" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>Mood
+                <select name="mood">
+                  <option>Great</option>
+                  <option>Happy</option>
+                  <option selected>Okay</option>
+                  <option>Tired</option>
+                  <option>Stressed</option>
+                </select>
+              </label>
+            </div>
+            <div class="estimate-box" id="calorie-estimate">Fill in activity, duration and mood to see an estimated calorie burn.</div>
+            <p class="form-error" id="activity-error"></p>
+            <button type="submit" class="btn btn-primary">Save entry</button>
+            <p class="form-hint">Calories are estimated from your activity, duration, mood and body weight — logging the same activity twice on one day updates that entry instead of duplicating it.</p>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h3>Calories over time</h3>
+          <canvas id="history-chart" height="220"></canvas>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Recent entries</h3>
+        <table class="data-table" id="history-table">
+          <thead>
+            <tr><th>Date</th><th>Activity</th><th>Duration</th><th>Calories</th><th>Steps</th><th>Mood</th><th></th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p class="empty-note hidden" id="history-empty">No entries yet — log your first session above.</p>
+      </div>
+    </section>
+
+    <!-- ---------- PREDICT ---------- -->
+    <section class="view" id="view-predict">
+      <header class="view-header">
+        <h2>Predict &amp; Recommend</h2>
+        <p>Your profile is loaded automatically and the trained model estimates calories for the workout you select. Model and dataset counts are loaded dynamically.</p>
+      </header>
+
+      <div class="panel-grid">
+        <div class="panel">
+          <h3>Calorie burn predictor</h3>
+          <form id="predict-form">
+            <div class="form-row">
+              <label>Age
+                <input type="number" name="age" min="13" max="90" required />
+              </label>
+              <label>Gender
+                <select name="gender"><option>Female</option><option>Male</option></select>
+              </label>
+            </div>
+            <div class="form-row">
+              <label>Weight (kg)
+                <input type="number" name="weight_kg" min="30" max="250" step="0.1" required />
+              </label>
+              <label>Height (cm)
+                <input type="number" name="height_cm" min="100" max="230" step="0.1" required />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>Workout type
+                <select name="workout_type" id="predict-workout-type"></select>
+              </label>
+              <label>Duration (min)
+                <input type="number" name="duration_min" min="5" max="240" required placeholder="45" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>Avg heart rate (bpm)
+                <input type="number" name="avg_bpm" min="60" max="220" required placeholder="145" />
+              </label>
+              <label>Max heart rate (bpm)
+                <input type="number" name="max_bpm" min="80" max="230" required placeholder="175" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>Resting heart rate (bpm)
+                <input type="number" name="resting_bpm" min="40" max="110" required placeholder="65" />
+              </label>
+              <label>Workouts / week
+                <input type="number" name="frequency" min="1" max="7" required placeholder="4" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>Experience level
+                <select name="experience_level"><option value="1">Beginner</option><option value="2">Intermediate</option><option value="3">Expert</option></select>
+              </label>
+            </div>
+            <p class="form-hint" id="predict-profile-note">Your age, gender, height, weight and experience are synchronized with your profile.</p>
+            <div class="estimate-box" id="fat-estimate">Body fat % is estimated automatically from your age, gender and BMI (Deurenberg formula) — no need to know it yourself.</div>
+            <p class="form-error" id="predict-error"></p>
+            <button type="submit" class="btn btn-primary">Predict</button>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h3>Result</h3>
+          <div id="predict-result" class="result-block">
+            <p class="empty-note">Fill in the form and hit predict to see your estimate and a matching workout recommendation.</p>
+          </div>
+          <div class="estimate-box" id="model-info-box" style="margin-top:12px;">Model information will load from the backend.</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>How activities compare</h3>
+        <p class="form-hint" style="margin-top:-8px;margin-bottom:14px;">Calories burned per minute, across <b id="activity-comparison-count">live dataset</b> logged sessions covering the available activity types.</p>
+        <canvas id="activity-comparison-chart" height="180"></canvas>
+      </div>
+    </section>
+
+    <!-- ---------- LIBRARY ---------- -->
+    <section class="view" id="view-library">
+      <header class="view-header">
+        <h2>Exercise Library</h2>
+        <p><span id="exercise-library-count">Loading exercise count…</span>, filterable by body part, equipment and level.</p>
+      </header>
+
+      <div class="panel">
+        <div class="library-filters">
+          <input type="text" id="lib-search" placeholder="Search exercises…" />
+          <select id="lib-bodypart"><option value="">All body parts</option></select>
+          <select id="lib-equipment"><option value="">All equipment</option></select>
+          <select id="lib-level"><option value="">All levels</option></select>
+        </div>
+        <div class="exercise-grid" id="exercise-grid"></div>
+        <div class="pager">
+          <button class="btn btn-ghost" id="lib-prev">← Prev</button>
+          <span id="lib-page-info">Page 1</span>
+          <button class="btn btn-ghost" id="lib-next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- INSIGHTS ---------- -->
+    <section class="view" id="view-insights">
+      <header class="view-header">
+        <h2>User Insights</h2>
+        <p>Your own sessions, set against the logged lifestyles of <span id="student-insights-count">reference users</span>. Reference values and your own metrics are loaded dynamically.</p>
+      </header>
+
+      <div class="insight-hero" id="insights-hero"></div>
+      <div class="kpi-grid" id="insights-kpis"></div>
+
+      <div class="panel-grid">
+        <div class="panel">
+          <h3>Physical activity vs. GPA &amp; sleep</h3>
+          <p class="form-hint chart-hint">Your bucket is highlighted. Click any group to explore it.</p>
+          <canvas id="insights-chart" height="240"></canvas>
+        </div>
+        <div class="panel explorer">
+          <h3>What-if explorer</h3>
+          <p class="form-hint chart-hint">Slide to see what users who log that much activity report.</p>
+          <div class="explorer-top">
+            <div class="explorer-hours"><span id="explorer-hours">0</span><small>hrs / day</small></div>
+            <div class="explorer-presets">
+              <button type="button" class="chip" id="explorer-me">My average</button>
+              <button type="button" class="chip" id="explorer-avg">Survey average</button>
+            </div>
+          </div>
+          <input type="range" id="explorer-range" min="0" max="10" step="0.5" value="4" aria-label="Hours of physical activity per day" />
+          <div class="explorer-scale"><span>0</span><span>5</span><span>10+</span></div>
+          <div id="explorer-result" class="explorer-result"></div>
+        </div>
+      </div>
+
+      <div class="panel-grid">
+        <div class="panel">
+          <h3>Your last 14 days</h3>
+          <p class="form-hint chart-hint">Minutes trained (bars) and calories burned (line) - hover any day.</p>
+          <canvas id="insights-daily-chart" height="230"></canvas>
+        </div>
+        <div class="panel">
+          <h3>Your activity mix</h3>
+          <p class="form-hint chart-hint">Where your logged minutes go. Hover a slice; click the legend to hide one.</p>
+          <canvas id="insights-mix-chart" height="230"></canvas>
+        </div>
+      </div>
+
+      <div class="panel-grid">
+        <div class="panel">
+          <h3>Stress across activity levels</h3>
+          <p class="form-hint chart-hint">Share of surveyed users reporting each stress level, by daily activity.</p>
+          <canvas id="insights-stress-chart" height="230"></canvas>
+        </div>
+        <div class="panel">
+          <h3>Your weekday pattern</h3>
+          <p class="form-hint chart-hint">Total minutes you have logged on each day of the week.</p>
+          <canvas id="insights-weekday-chart" height="230"></canvas>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>What the data says</h3>
+        <div class="survey-strip" id="insights-strip"></div>
+        <div id="insights-text" class="story-grid"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Where you fit in</h3>
+        <div id="insights-personal"></div>
+      </div>
+    </section>
+
+    <!-- ---------- NUTRITION ---------- -->
+    <section class="view" id="view-nutrition">
+      <header class="view-header">
+        <h2>Nutrition</h2>
+        <p>Log what you eat from <span id="nutrition-food-count">the live food database</span>, then look back at any day - what you ate, what you burned and how the day ended.</p>
+      </header>
+
+      <div class="panel day-nav-panel">
+        <div class="day-nav">
+          <button type="button" class="btn btn-ghost day-step" id="day-prev" aria-label="Previous day">&lsaquo;</button>
+          <label class="day-picker">Viewing day
+            <input type="date" id="food-log-date" />
+          </label>
+          <button type="button" class="btn btn-ghost day-step" id="day-next" aria-label="Next day">&rsaquo;</button>
+          <button type="button" class="btn btn-ghost" id="day-today">Today</button>
+          <span class="day-nav-label" id="day-nav-label"></span>
+        </div>
+        <div class="day-chips" id="day-chips" aria-label="Last 7 days"></div>
+      </div>
+
+      <div class="panel goal-panel">
+        <h3>Daily calorie goal</h3>
+        <div class="goal-row">
+          <label class="goal-select-label">My goal
+            <select id="goal-select"></select>
+          </label>
+          <div class="goal-progress">
+            <div class="goal-bar"><div class="goal-bar-fill" id="goal-bar-fill"></div></div>
+            <p id="goal-text" class="goal-text">Loading…</p>
+          </div>
+        </div>
+        <p class="form-error" id="goal-error"></p>
+        <p class="form-hint">Target = resting needs (Mifflin-St Jeor) × 1.2, plus calories from exercise you logged that day, adjusted for your goal and never below resting needs. An estimate for motivation — not medical or dietetic advice.</p>
+      </div>
+
+      <div class="panel" id="day-summary-panel">
+        <h3>Day summary <span class="h3-sub" id="day-summary-date"></span></h3>
+        <div class="balance-grid" id="balance-grid"></div>
+        <p class="day-verdict" id="day-verdict"></p>
+        <div class="day-lists">
+          <div><h4>Meals</h4><div id="day-meals" class="mini-list"></div></div>
+          <div><h4>Workouts</h4><div id="day-workouts" class="mini-list"></div></div>
+        </div>
+        <p class="form-hint">Net = calories eaten − calories burned by logged exercise. Energy balance compares what you ate with an estimate of what your body needed that day (resting needs × 1.2 + logged exercise) — an estimate, not medical advice.</p>
+      </div>
+
+      <div class="panel" id="history-panel">
+        <div class="panel-head">
+          <h3>Your history</h3>
+          <div class="seg seg-tight" id="history-range">
+            <button type="button" class="seg-btn active" data-days="7">7 days</button>
+            <button type="button" class="seg-btn" data-days="14">14 days</button>
+            <button type="button" class="seg-btn" data-days="30">30 days</button>
+          </div>
+        </div>
+        <div class="history-stats" id="history-stats"></div>
+        <canvas id="nutrition-history-chart" height="240"></canvas>
+        <p class="form-hint chart-hint">Bars: eaten vs burned. Dashed line: your target for that day. Click a day to open it.</p>
+        <table class="data-table history-table" id="history-days-table">
+          <thead><tr><th>Date</th><th>Eaten</th><th>Burned</th><th>Net</th><th>Target</th><th>Day ended</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="panel-grid">
+        <div class="panel">
+          <h3>Log a meal</h3>
+          <form id="food-form">
+            <div class="form-row">
+              <label>Date
+                <input type="date" name="date" required />
+              </label>
+              <label>Meal
+                <select name="meal" required>
+                  <option>Breakfast</option>
+                  <option>Lunch</option>
+                  <option>Dinner</option>
+                  <option>Snack</option>
+                </select>
+              </label>
+            </div>
+            <label>Food
+              <div class="food-combobox">
+                <input type="text" name="food_name" id="food-search-input" required
+                       placeholder="Start typing… e.g. Banana" autocomplete="off" />
+                <div class="food-suggestions hidden" id="food-suggestions"></div>
+              </div>
+            </label>
+            <div class="form-row">
+              <label>Servings
+                <input type="number" name="servings" min="0.25" step="0.25" value="1" required id="food-servings-input" />
+              </label>
+              <label>Calories
+                <input type="number" name="calories" min="0" required placeholder="450" id="food-calories-input" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>Protein (g)
+                <input type="number" name="protein_g" min="0" step="0.1" required placeholder="30" id="food-protein-input" />
+              </label>
+              <label>Carbs (g)
+                <input type="number" name="carbs_g" min="0" step="0.1" required placeholder="45" id="food-carbs-input" />
+              </label>
+            </div>
+            <label>Fat (g)
+              <input type="number" name="fat_g" min="0" step="0.1" required placeholder="15" id="food-fat-input" />
+            </label>
+            <p class="form-hint hidden" id="food-not-found">Not in the food database — enter the calories, protein, carbs and fat yourself (the totals for the servings above).</p>
+            <label class="check-row hidden" id="save-custom-row">
+              <input type="checkbox" id="save-custom-input" checked />
+              <span>Save this food to <b>My foods</b> so it auto-fills next time</span>
+            </label>
+            <p class="form-error" id="food-error"></p>
+            <button type="submit" class="btn btn-primary">Add to log</button>
+            <p class="form-hint">Pick a food from the dropdown as you type and calories/protein/carbs/fat fill in automatically, scaled to your servings. Indian foods (roti, paratha, dal, paneer, dosa, idli, curd, sweets and more) are included. Values are approximate — a katori is about 150 g. Not listed? Type the name and numbers yourself and save it to My foods.</p>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h3>Macros <span class="h3-sub" id="macro-date-label"></span></h3>
+          <div id="macro-stats" class="macro-stats">
+            <div class="macro-stat"><span class="num" id="macro-calories">0</span><span class="lbl">kcal</span></div>
+            <div class="macro-stat"><span class="num" id="macro-protein">0g</span><span class="lbl">protein</span></div>
+            <div class="macro-stat"><span class="num" id="macro-carbs">0g</span><span class="lbl">carbs</span></div>
+            <div class="macro-stat"><span class="num" id="macro-fat">0g</span><span class="lbl">fat</span></div>
+          </div>
+          <canvas id="macro-chart" height="200"></canvas>
+        </div>
+      </div>
+
+      <div class="panel my-foods-panel">
+        <div class="panel-head-row my-foods-head">
+          <div>
+            <h3>My foods <span class="h3-sub" id="my-foods-count"></span></h3>
+            <p class="form-hint">Your private food list. Nutrition values are stored <b>per serving</b> and automatically appear in Food search.</p>
+          </div>
+          <button type="button" class="btn btn-primary" id="my-food-add-btn">+ Add custom food</button>
+        </div>
+
+        <div class="my-foods-toolbar">
+          <input type="search" id="my-food-search" placeholder="Search your foods…" autocomplete="off" />
+          <span class="my-foods-note">Only you can see these foods.</span>
+        </div>
+
+        <form id="my-food-form" class="my-food-form hidden">
+          <input type="hidden" id="my-food-id" />
+          <div class="my-food-form-head">
+            <div>
+              <b id="my-food-form-title">Add a custom food</b>
+              <span>Enter nutrition for one serving.</span>
+            </div>
+            <button type="button" class="btn btn-ghost" id="my-food-cancel">Cancel</button>
+          </div>
+          <div class="form-row">
+            <label>Food name
+              <input type="text" id="my-food-name" maxlength="120" required placeholder="e.g. Homemade chicken roll" />
+            </label>
+            <label>Calories (kcal)
+              <input type="number" id="my-food-calories" min="0" max="5000" step="1" required placeholder="320" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>Protein (g)
+              <input type="number" id="my-food-protein" min="0" max="1000" step="0.1" required placeholder="18" />
+            </label>
+            <label>Carbs (g)
+              <input type="number" id="my-food-carbs" min="0" max="1000" step="0.1" required placeholder="35" />
+            </label>
+            <label>Fat (g)
+              <input type="number" id="my-food-fat" min="0" max="1000" step="0.1" required placeholder="12" />
+            </label>
+          </div>
+          <p class="form-error" id="my-food-error"></p>
+          <button type="submit" class="btn btn-primary" id="my-food-save">Save food</button>
+        </form>
+
+        <table class="data-table" id="my-foods-table">
+          <thead>
+            <tr><th>Food</th><th>Calories</th><th>Protein</th><th>Carbs</th><th>Fat</th><th>Actions</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="my-foods-empty hidden" id="my-foods-empty">
+          <div class="my-foods-empty-icon">＋</div>
+          <b id="my-foods-empty-title">No custom foods yet</b>
+          <p id="my-foods-empty-copy">Save a food you eat regularly and it will appear first when you search for it in the meal logger.</p>
+          <button type="button" class="btn btn-ghost" id="my-foods-empty-btn">Create your first food</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Food log <span class="h3-sub" id="food-log-date-label"></span></h3>
+        <table class="data-table" id="food-table">
+          <thead>
+            <tr><th>Meal</th><th>Food</th><th>Servings</th><th>Calories</th><th>Protein</th><th>Carbs</th><th>Fat</th><th></th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p class="empty-note hidden" id="food-empty">No meals logged for this day yet.</p>
+      </div>
+    </section>
+
+    <!-- ---------- LEADERBOARD ---------- -->
+    <!-- ---------- WEIGHT & BMI ---------- -->
+    <section class="view" id="view-weight">
+      <header class="view-header">
+        <h2>Weight &amp; BMI</h2>
+        <p>Log your weight over time and watch your BMI trend. Your latest entry keeps the rest of the app (predictor, benchmark) up to date.</p>
+      </header>
+
+      <div class="stat-cards" id="weight-stat-cards"></div>
+
+      <div class="panel-grid">
+        <div class="panel">
+          <h3>Log weight</h3>
+          <form id="weight-form">
+            <div class="form-row">
+              <label>Date
+                <input type="date" name="date" required />
+              </label>
+              <label>Weight (kg)
+                <input type="number" name="weight_kg" min="20" max="400" step="0.1" required placeholder="60.5" />
+              </label>
+            </div>
+            <p class="form-error" id="weight-error"></p>
+            <button type="submit" class="btn btn-primary">Save weight</button>
+            <p class="form-hint">Logging a date you've already logged updates that entry instead of duplicating it.</p>
+          </form>
+        </div>
+        <div class="panel">
+          <h3>BMI &amp; weight over time</h3>
+          <canvas id="bmi-chart" height="220"></canvas>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>History</h3>
+        <table class="data-table" id="weight-table">
+          <thead><tr><th>Date</th><th>Weight</th><th>Change</th><th>BMI</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <p class="empty-note hidden" id="weight-empty">No weight entries yet — log your first one above.</p>
+      </div>
+    </section>
+
+    <section class="view" id="view-leaderboard">
+      <header class="view-header">
+        <h2>Leaderboard</h2>
+        <p>Ranked by calories burned across all FitStreak users on this server, with context from real exercise-habit data — not just a bare table.</p>
+      </header>
+
+      <div class="seg" id="lb-period">
+        <button type="button" class="seg-btn active" data-period="week">Last 7 days</button>
+        <button type="button" class="seg-btn" data-period="month">Last 30 days</button>
+        <button type="button" class="seg-btn" data-period="all">All time</button>
+      </div>
+
+      <div class="lb-community" id="lb-community"></div>
+
+      <div class="lb-podium" id="lb-podium"></div>
+
+      <div class="panel" id="lb-chart-panel">
+        <div class="panel-head">
+          <h3>Top users this period</h3>
+          <span class="h3-sub" id="lb-chart-sub"></span>
+        </div>
+        <canvas id="leaderboard-chart" height="230"></canvas>
+        <p class="form-hint chart-hint" id="lb-chart-hint"></p>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Full board</h3>
+          <label class="lb-search"><input type="search" id="lb-search" placeholder="Find a user…" /></label>
+        </div>
+        <table class="data-table lb-table" id="leaderboard-table">
+          <thead><tr><th>#</th><th>User</th><th>kcal burned</th><th>Avg / session</th><th>Sessions</th><th>Streak</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <p class="form-hint" id="your-rank-note"></p>
+      </div>
+    </section>
+
+    <!-- ---------- HEALTH BENCHMARK ---------- -->
+    <section class="view" id="view-benchmark">
+      <header class="view-header">
+        <h2>Health Benchmark</h2>
+        <p>See how your logged activity compares with the reference population in your age bracket. Descriptive only — not a diagnosis.</p>
+      </header>
+
+      <div class="panel-grid">
+        <div class="panel">
+          <h3>Where do you stand?</h3>
+          <form id="benchmark-form">
+            <div class="form-row">
+              <label>Age
+                <input type="number" name="age" min="13" max="100" required placeholder="22" />
+              </label>
+              <label>Daily steps
+                <input type="number" name="daily_steps" min="0" max="60000" required placeholder="9000" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>Sleep (hours/night)
+                <input type="number" name="sleep_hours" min="0" max="14" step="0.1" required placeholder="7" />
+              </label>
+              <label>Exercise (hours/week)
+                <input type="number" name="exercise_hours_per_week" min="0" max="40" step="0.1" required placeholder="4" />
+              </label>
+            </div>
+            <p class="form-error" id="benchmark-error"></p>
+            <button type="submit" class="btn btn-primary">Compare</button>
+            <p class="form-hint" id="benchmark-source-note">Compared against a public health-activity survey of <span id="health-benchmark-count">the reference population</span> — not medical advice. Your activity values are prefilled from your recent logs.</p>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h3>Your comparison</h3>
+          <div id="benchmark-result" class="result-block">
+            <p class="empty-note">Fill in the form to see your percentile within your age bracket.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head-row">
+          <h3>Averages by age bracket</h3>
+          <span class="panel-head-note" id="benchmark-chart-note">Compare across every age group — your bracket lights up once you submit the form.</span>
+        </div>
+        <canvas id="benchmark-chart" height="200"></canvas>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<!-- js/minicharts.js draws every chart (interactive SVG, works fully offline). -->
+<script src="/js/minicharts.js?v=9.6"></script>
+<script src="/js/app.js?v=9.6"></script>
+<script src="/js/auth-fx.js?v=9.6"></script>
+</body>
+</html>

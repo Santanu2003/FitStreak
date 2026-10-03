@@ -1,0 +1,171 @@
+{
+  "sample_size": 2000,
+  "activity_vs_outcomes": [
+    {
+      "Activity_Bucket": "< 1 hr/day",
+      "avg_gpa": 3.27,
+      "avg_sleep": 8.6,
+      "avg_study": 8.52,
+      "count": 173
+    },
+    {
+      "Activity_Bucket": "1-2 hrs/day",
+      "avg_gpa": 3.25,
+      "avg_sleep": 8.29,
+      "avg_study": 8.35,
+      "count": 221
+    },
+    {
+      "Activity_Bucket": "2-3 hrs/day",
+      "avg_gpa": 3.19,
+      "avg_sleep": 8.07,
+      "avg_study": 7.98,
+      "count": 270
+    },
+    {
+      "Activity_Bucket": "3+ hrs/day",
+      "avg_gpa": 3.06,
+      "avg_sleep": 7.11,
+      "avg_study": 7.1,
+      "count": 1336
+    }
+  ],
+  "activity_by_stress": [
+    {
+      "stress_level": "Low",
+      "avg_activity_hours": 5.58
+    },
+    {
+      "stress_level": "Moderate",
+      "avg_activity_hours": 4.34
+    },
+    {
+      "stress_level": "High",
+      "avg_activity_hours": 3.96
+    }
+  ],
+  "correlation_activity_gpa": -0.341,
+  "correlation_activity_sleep": -0.47,
+  "overall_avg_activity_hours": 4.33,
+  "overall_avg_gpa": 3.12,
+  "activity_curve": [
+    {
+      "from_hr": 0,
+      "label": "0-1",
+      "avg_gpa": 3.27,
+      "avg_sleep": 8.6,
+      "avg_study": 8.52,
+      "pct_high_stress": 71.1,
+      "count": 173
+    },
+    {
+      "from_hr": 1,
+      "label": "1-2",
+      "avg_gpa": 3.25,
+      "avg_sleep": 8.29,
+      "avg_study": 8.35,
+      "pct_high_stress": 67.0,
+      "count": 221
+    },
+    {
+      "from_hr": 2,
+      "label": "2-3",
+      "avg_gpa": 3.19,
+      "avg_sleep": 8.07,
+      "avg_study": 7.98,
+      "pct_high_stress": 54.4,
+      "count": 270
+    },
+    {
+      "from_hr": 3,
+      "label": "3-4",
+      "avg_gpa": 3.15,
+      "avg_sleep": 7.61,
+      "avg_study": 7.72,
+      "pct_high_stress": 54.3,
+      "count": 280
+    },
+    {
+      "from_hr": 4,
+      "label": "4-5",
+      "avg_gpa": 3.09,
+      "avg_sleep": 7.45,
+      "avg_study": 7.36,
+      "pct_high_stress": 44.5,
+      "count": 283
+    },
+    {
+      "from_hr": 5,
+      "label": "5-6",
+      "avg_gpa": 3.08,
+      "avg_sleep": 7.21,
+      "avg_study": 7.25,
+      "pct_high_stress": 42.4,
+      "count": 243
+    },
+    {
+      "from_hr": 6,
+      "label": "6-7",
+      "avg_gpa": 3.02,
+      "avg_sleep": 6.99,
+      "avg_study": 6.85,
+      "pct_high_stress": 40.7,
+      "count": 204
+    },
+    {
+      "from_hr": 7,
+      "label": "7-8",
+      "avg_gpa": 3.02,
+      "avg_sleep": 6.65,
+      "avg_study": 6.67,
+      "pct_high_stress": 38.5,
+      "count": 143
+    },
+    {
+      "from_hr": 8,
+      "label": "8-9",
+      "avg_gpa": 2.97,
+      "avg_sleep": 6.42,
+      "avg_study": 6.26,
+      "pct_high_stress": 43.8,
+      "count": 89
+    },
+    {
+      "from_hr": 9,
+      "label": "9+",
+      "avg_gpa": 2.87,
+      "avg_sleep": 5.99,
+      "avg_study": 6.01,
+      "pct_high_stress": 56.4,
+      "count": 94
+    }
+  ],
+  "stress_by_bucket": [
+    {
+      "Activity_Bucket": "< 1 hr/day",
+      "low": 5.2,
+      "moderate": 23.7,
+      "high": 71.1
+    },
+    {
+      "Activity_Bucket": "1-2 hrs/day",
+      "low": 4.1,
+      "moderate": 29.0,
+      "high": 67.0
+    },
+    {
+      "Activity_Bucket": "2-3 hrs/day",
+      "low": 8.5,
+      "moderate": 37.0,
+      "high": 54.4
+    },
+    {
+      "Activity_Bucket": "3+ hrs/day",
+      "low": 19.2,
+      "moderate": 35.1,
+      "high": 45.7
+    }
+  ],
+  "overall_avg_sleep": 7.5,
+  "overall_avg_study": 7.48
+}
