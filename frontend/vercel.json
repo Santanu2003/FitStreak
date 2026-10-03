@@ -1,8 +1,8 @@
-{
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "https://YOUR-RENDER-APP.onrender.com/api/:path*"
-    }
-  ]
-}
+   {
+     "rewrites": [
+       {
+         "source": "/api/:path*",
+         "destination": "https://fitstreak-api-nvqf.onrender.com/api/:path*"
+       }
+     ]
+   }
